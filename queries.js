@@ -11,7 +11,7 @@ read(id) {
 
 create(people) {
     return database('people').insert(people).returning('*')
-        .then(record => record[0])
+        .then(record => record)
 },
 
 update(id, people) {
