@@ -6,6 +6,7 @@ const people = require("./routes/people")
 
 app.use(bodyParser.json())
 app.use("/people", people)
+app.use(cors())
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");
